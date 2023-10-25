@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let y = prompt("Are you educated : ");
+        if(y == "y"){
+            let age = prompt("Enter your age :");
+            if(age == 18){
+                console.log("you are eligible for vote.");
+            }
+            else if(age > 18){
+                console.log("you are aslo eligible for vote.");
+            }
+            else{
+                console.warn("you are not eligible for vote. bcz your minor");
+            }
+        }
+        else{
+            console.log("You are not educated.");
+        }
+
+    </script>
+</body>
+</html>
