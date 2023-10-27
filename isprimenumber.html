@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>isprime Number in js</title>
+  </head>
+  <body>
+    <script>
+      let number = 10;
+      let isprime = true;
+      for (let i = 2; i < number; i++) {
+        if (isprime % i == 0) {
+          isprime = false;
+          break;
+        }
+      }
+      if (isprime) {
+        console.log("This is a prime number :");
+      } else {
+        console.log("This is not a prime number :");
+      }
+    </script>
+  </body>
+</html>
