@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array in javascript</title>
+</head>
+<body>
+    <script>
+        // position of value ==> index number
+        // index ==> 0;
+        let arr = [10,"hello",20,null,true];
+
+        // console.log(arr);
+
+        // console.log(typeof(arr));
+
+        let arr1 = ["sunny","Satveer","Abhishek","Sapna","Ankita"];
+        // console.log(arr1[1]);
+
+        arr1[1] = "sapna";
+        //console.log(arr1);
+
+        arr1[2] = "Abhishek";
+        arr1[1] = "satveer";
+        //console.log(arr1);
+
+        // arr.length = length of array
+        for(let i = 0; i < arr1.length ; i++){
+            console.log("Student Name : ",arr1[i]);
+        }
+        console.log("================================");
+        // create by default array without value 
+        let arr2 = new Array(5);
+        arr2[1] = "Sunny";
+        for(let i = 0; i < arr2.length ; i++){
+            console.log("Student Name : ",arr2[i]);
+        }
+        
+
+
+    </script>
+</body>
+</html>
