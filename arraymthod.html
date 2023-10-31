@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array method in javascript</title>
+</head>
+<body>
+    <script>
+        //1.sort method in array
+        let arr = ["sunny","ravi","abhishek","satveer","ankita","sapna",21,34,2];
+        console.log(arr);
+        let arr1 = arr.sort();
+        console.log(arr1);
+
+        //2.reverse method in array
+        console.log(arr1.reverse());
+
+        //3.pop method in array
+        arr1.pop();
+        arr1.pop();
+        arr1.pop();
+        console.log(arr1);
+
+        //4.push method in array
+        arr1.push("Rubina");
+        console.log(arr1);
+        arr1.pop();
+        console.log(arr1);
+
+        //5.shift method in array
+        console.log(arr1.shift());
+        console.log(arr1);
+
+        //6.unshift method in array
+        console.log(arr1.unshift("sunny"));
+        console.log(arr1);
+
+        //7.concat method in array
+        let arr3 = ["sunny","shi","bola","hai"];
+        console.log(arr1.concat(arr3));
+
+        //8.join method in array
+        let str = arr3.join("-");
+        console.log(str);
+        let str1 = arr1.join("*");
+        console.log(str1);
+
+        //9.tostring method in arry
+        console.log(arr1.toString());
+
+        
+        //10.flat method in array
+        let arr4 = [[2,3],[4,5],[6,7],[4,6]];
+        console.log(arr4);
+        console.log(arr4.flat());
+        
+        //11.fill method in array
+        console.log(arr4.fill(5,2,4));
+
+    </script>
+</body>
+</html>
