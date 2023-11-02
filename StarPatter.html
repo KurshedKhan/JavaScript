@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incrase pattern in js use of for loop</title>
+</head>
+<body>
+    <script>
+        document.write("<pre>");
+        // increase star pattern
+        let n = 10;
+      for(let i = 0; i < n ; i++){
+        let space = " ".repeat(n-i);
+        let star = "*".repeat(2*i + 1);
+        document.writeln(space + star);
+      }
+      //square pattern 
+      for(let i = 0; i < n ; i++){
+        let square = "*".repeat(2*n+1);
+        document.writeln(square);
+      }
+      // decrament star pattern
+      for(let i = n; i >= 0 ; i--){
+        let space = " ".repeat(n-i);
+        let star = "*".repeat(2*i + 1);
+        document.writeln(space + star);
+      }
+      document.write("</pre>");
+    </script>
+</body>
+</html>
