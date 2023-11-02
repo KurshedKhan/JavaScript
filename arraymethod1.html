@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Method in javascript</title>
+</head>
+<body>
+    <script>
+        //1.slice method in array
+        let arr = ["sunny","Banana","Abhishek","Orange","Ankita","Apple"];
+        let arr1 = arr.slice(2,4);
+        console.log(arr1);
+
+        //delete keyword in array
+
+        delete arr[1];
+        console.log(arr);
+
+        console.log(arr[1]);
+
+       // splice method in array
+       let arr3 = [23,"Ankita","Abhishek",43,"sahil"];
+       let arr4 = arr3.splice(2,0,"Apple","iphone");
+
+       console.log(arr4);
+       // indexOf method in array
+       console.log(arr3.indexOf("Ankita"));
+    </script>
+</body>
+</html>
