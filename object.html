@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object in javascript</title>
+</head>
+<body>
+    <script>
+        // What is object in javascript
+        // : colon
+        // , comma
+        // {} crly brases
+        
+        let Student = {
+            firstName : "Kurshed",
+            lastName : "Khan",
+            age : 19,
+            height : 6,
+            Bloodgroup : "B+",
+            Subject : ["Hindi","English","Math"],
+            fullname : function (){
+                return this.firstName +" " + this.lastName;
+            },
+            Parents :{
+                FatherName : "xyz",
+                MotherName : "ABC"
+            }
+
+        };
+        // console.log("My name is ", Student.name , " and i am " , Student.age , " year old.");
+   
+        // console.log("Height is :",Student.height);
+
+        // Student.subject = "English";
+        // console.log(Student.subject);
+        // delete Student.Bloodgroup;
+        // console.log(Student.Bloodgroup);
+        // console.log(Student.Subject[2]);
+        // Student.Subject.push("Science");
+        console.log(Student.fullname());
+        console.log(Student.Parents.FatherName);
+    </script>
+</body>
+</html>
