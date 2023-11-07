@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map in js</title>
+  </head>
+  <body>
+    <script>
+      // array with map funciton
+      let arr = [1, 2, 3, 4, 5];
+
+      let arr2 = arr.map(test);
+
+      function test(ankita) {
+        return ankita + 10;
+      }
+
+      console.log(arr2);
+
+      // array with object use of map function
+
+      let Person = [
+        {firsrname : "Abhishek",lastname : "Choudhary"},
+        {firsrname : "Satveer",lastname : "Choudhary"},
+        {firsrname : "Sunny",lastname : "Chuhan"},
+        {firsrname : "Ankita",lastname : "Sharma"}
+      ]
+
+
+      let fullname = Person.map(getfullname);
+
+      function getfullname(x) {
+        return x.firsrname + " " + x.lastname;
+      }
+      console.log(fullname);
+      console.log(Person);
+    </script>
+  </body>
+</html>
