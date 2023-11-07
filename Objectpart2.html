@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object in js</title>
+  </head>
+  <body>
+    <script>
+        let Employee = {
+            
+            name : "Abhishek",
+            id : 1234,
+            post : "Manager",
+            salary : 24000,
+            subject : [sub1 = "Hindi",sub1 ="English",sub3 ="Math"]
+        }
+        // for in loop in js
+        for(let key in Employee.subject){
+            console.log(key + " " +Employee.subject[key]);
+        }
+        // console.log(Employee.name)
+        // Employee.subject = 345;
+        // console.log(Employee);
+        
+    </script>
+  </body>
+</html>
