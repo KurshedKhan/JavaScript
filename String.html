@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = "Abhishek Choudhary ";
+        // 1. length property
+        console.log("length of string : ",str.length);
+
+        // 2. slice method with positive value
+        console.log("Name : ",str.slice(0,8));
+
+        // 2.1 slice method with minus value
+        console.log("Last Name :",str.slice(-10,-1));
+
+        // 3.substr method with positive value
+        console.log("Name :",str.substr(0,8));
+
+        // 4.substring method 
+        console.log("Name :",str.substring(0,8));
+
+        // 5.replace method
+        let str1 = "I am joining Tech , bcz Tech is a brand.";
+        console.log(str1);
+        let newstr1 = str1.replace("Tech","Tech Innovation");
+        console.log(newstr1);
+
+        // 6.replaceAll method
+        let newstr2 = str1.replaceAll("Tech","Tech Innovation");
+        console.log(newstr2);
+        
+        // 7.toUpperCase() method
+        let str2 = "Abhishek";
+        console.log(str2.toUpperCase());
+        
+        // 7.toUpperCase() method
+        let str3 = "chodHary";
+        console.log(str2.toLowerCase());
+
+        // 8. concat() method
+        console.log(str2.concat(" ",str3));
+
+        // 9.trim() method
+        let trimstr = "                Abhishek Choudhary                   "; 
+        console.log(trimstr.trim());
+
+        // 10. trimstart method
+        let trimstr1 = "                Abhishek Choudhary                   ";
+        console.log(trimstr1.trimStart());
+
+        // 11. charAt() method
+        let text = "HELLO WORLD";
+        let char = text.charAt(0);
+        console.log(char)      
+
+
+    </script>
+</body>
+</html>
