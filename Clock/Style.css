@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #b3e5fc;
+    font-family: "Raleway", sans-serif;
+    height: 100vh;
+    background-image: url(wp1853774.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: spin 2s linear infinite;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 1rem 3rem;
+    background-color: #ffef73a1;
+    color: black;
+    cursor: pointer;
+    border-radius: 1rem;
+    font-size: 3rem;
+    font-weight: bold;
+}
+p{
+    font-size: 3rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 1rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+.CreateOpacity{
+    height: 100vh;
+    background-color: rgba(2, 2, 2, 0.487);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Match List</title>
+    <style>
+        /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.autocomplete {
+    position: relative;
+    width: 300px;
+}
+
+#search {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#match-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 1px solid #ccc;
+    border-top: none;
+    background: white;
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#match-list li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#match-list li:hover {
+    background: #f0f0f0;
+}
+
+    </style>
+</head>
+<body>
+    <div class="autocomplete">
+        <input type="text" id="search" placeholder="Search...">
+        <ul id="match-list"></ul>
+    </div>
+
+    <script>
+        // script.js
+
+// Sample data
+const items = [
+'Apple',
+'Banana',
+'Orange',
+'Mango',
+'Pineapple',
+'Strawberry',
+'Blueberry',
+'Grapes'
+];
+
+document.addEventListener('DOMContentLoaded', () => {
+const search = document.getElementById('search');
+const matchList = document.getElementById('match-list');
+
+// Filter items and display matches
+const searchItems = (searchText) => {
+    let matches = items.filter(item => {
+        const regex = new RegExp(`^${searchText}`, 'gi');
+        return item.match(regex);
+    });
+
+    if (searchText.length === 0) {
+        matches = [];
+        matchList.innerHTML = '';
+    }
+
+    outputHtml(matches);
+};
+
+// Show results in HTML
+const outputHtml = (matches) => {
+    if (matches.length > 0) {
+        const html = matches.map(
+            match => `<li>${match}</li>`
+        ).join('');
+        matchList.innerHTML = html;
+    } else {
+        matchList.innerHTML = '';
+    }
+};
+
+// Add input event listener
+search.addEventListener('input', () => searchItems(search.value));
+
+// Add click event listener for list items
+matchList.addEventListener('click', e => {
+    if (e.target.tagName === 'LI') {
+        search.value = e.target.textContent;
+        matchList.innerHTML = '';
+    }
+});
+});
+
+    </script>
+</body>
+</html>
