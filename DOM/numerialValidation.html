@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Validation in JS</title>
+</head>
+<body>
+    <form name="myForm" onsubmit="return numberValidation()">
+        <label for="number">Number</label><br>
+        <input type="text" id="number" name="number"> <br><br>
+
+        <input type="submit" value="OK">
+    </form>
+
+
+    <script>
+        function numberValidation(){
+           let x =  parseInt(document.forms["myForm"]["number"].value);
+
+           if((x>=1) && (x <= 10)){
+                alert("1 to 9 , number dekh ke dal bhai !");
+                return false;
+           }
+        }
+    </script>
+</body>
+</html>

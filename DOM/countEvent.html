@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Funcitonality</title>
+</head>
+<body>
+    <h1>Count down</h1>
+    <button id="btn">Start</button>
+    <p id="count"></p>
+
+    <script>
+        let z = document.getElementById("btn");
+        let num = 0;
+        z.addEventListener("click",function(){
+            let y = document.getElementById("count");
+            y.innerText = num++;
+        })
+    </script>
+</body>
+</html>

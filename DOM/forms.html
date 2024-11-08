@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>forms in html</title>
+  </head>
+  <body>
+    <form method="post" name="form" action="/intro.html" onsubmit="return ValidationForm()">
+      <label for="username">UserName</label><br />
+      <input type="text" id="username" name="username" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <script>
+      function ValidationForm() {
+        let x = document.forms["form"]["username"].value;
+        if (x == "") {
+          alert("Enter data please !");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
