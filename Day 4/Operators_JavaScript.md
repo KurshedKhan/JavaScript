@@ -71,9 +71,9 @@ Used for combining boolean values.
 
 | Operator | Description | Example | Output |
 |----------|-------------|---------|--------|
-| `&&` | AND | `true && false` | `false` |
-| `||` | OR | `true || false` | `true` |
-| `!` | NOT | `!true` | `false` |
+### | `&&` | AND | `true && false` | `false` |`
+### `| `||` | OR | `true` || `false` | `true` |`
+### `| `!` | NOT | `!true` | `false` |`
 
 ```js
 console.log(true && false); // false
