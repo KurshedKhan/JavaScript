@@ -97,17 +97,84 @@
 // console.log(result);
 
 
- let day = "Fri";
- let result;
-switch(day){
-  case "Mon":
-    result = "📅 Start of the week!";
+//  let day = "Fri";
+//  let result;
+// switch(day){
+//   case "Mon":
+//     result = "📅 Start of the week!";
+//     break;
+//   case "Fri" :
+//     result = "🎉 Weekend is near!";
+//     break;
+//   default:
+//     result = "📅 Just another day!"
+// }
+
+// console.log(result);
+
+// let isAdult = true;
+// let hasId = true;
+// let result;
+// if(isAdult === true && hasId === true){
+//   result = "you are entered.";
+// }
+// else{
+//   result = "you are not entered.";
+// }
+
+// console.log(result);
+
+
+// let email = "kurshedkhan@gmail.com";
+// let result;
+// if(email.includes("@") && email.includes(".com")){
+//   result = "your email is valid.";
+// }
+// else{
+//   result = "Please enter valid email."
+// }
+
+// console.log(result);
+
+// let day = new Date().getDay();
+// switch (day) {
+//     case 0:
+//         console.log("Sunday");
+//         break;
+//     case 1:
+//         console.log("Monday");
+//         break;
+//     case 2:
+//         console.log("Tuesday");
+//         break;
+//     case 3:
+//         console.log("Wednesday");
+//         break;
+//     case 4:
+//         console.log("Thursday");
+//         break;
+//     case 5:
+//         console.log("Friday");
+//         break;
+//     case 6:
+//         console.log("Saturday");
+//         break;
+//     default:
+//         console.log("Invalid day");
+// }
+
+let units = 120;
+switch(true){
+
+  case (units >= 50 && units <= 100) :
+    console.log("Bill 500rupess");
     break;
-  case "Fri" :
-    result = "🎉 Weekend is near!";
+
+  case (units >= 101 && units <= 150) :
+    console.log("Bill 1000rupess");
     break;
   default:
-    result = "📅 Just another day!"
+    console.log("Bill 2000rupess");
+    break;
+  
 }
-
-console.log(result);
