@@ -461,7 +461,7 @@ if (isPrime) {
 
 ## 31️⃣ Check if a number is within a given range (10-50)
 
-```js
+```javascript
 
 let num = 25;
 if (num >= 10 && num <= 50) {
@@ -484,10 +484,11 @@ if (year % 1000 === 0) {
 }
 
 ```
-33️⃣ Find the greatest among four numbers
-javascript
-Copy
-Edit
+## 33️⃣ Find the greatest among four numbers
+
+```javascript
+
+
 let a = 10, b = 40, c = 30, d = 25;
 if (a > b && a > c && a > d) {
     console.log("Greatest:", a);
@@ -498,20 +499,27 @@ if (a > b && a > c && a > d) {
 } else {
     console.log("Greatest:", d);
 }
-34️⃣ Check if a number is a power of 2
-javascript
-Copy
-Edit
+
+```
+
+## 34️⃣ Check if a number is a power of 2
+
+```javascript
+
+
 let num = 16;
 if ((num & (num - 1)) === 0 && num > 0) {
     console.log(num, "is a power of 2");
 } else {
     console.log(num, "is not a power of 2");
 }
-35️⃣ Determine the type of a polygon based on the number of sides
-javascript
-Copy
-Edit
+
+```
+
+## 35️⃣ Determine the type of a polygon based on the number of sides
+
+```javascript
+
 let sides = 5;
 switch (sides) {
     case 3: console.log("Triangle"); break;
@@ -520,26 +528,35 @@ switch (sides) {
     case 6: console.log("Hexagon"); break;
     default: console.log("Polygon with", sides, "sides");
 }
-36️⃣ Check if a person is eligible for a driving license (Age 18+)
-javascript
-Copy
-Edit
+
+```
+
+## 36️⃣ Check if a person is eligible for a driving license (Age 18+)
+
+```javascript
+
 let age = 16;
 if (age >= 18) {
     console.log("Eligible for a driving license");
 } else {
     console.log("Not eligible for a driving license");
 }
-37️⃣ Find the last digit of a number
-javascript
-Copy
-Edit
+
+```
+
+## 37️⃣ Find the last digit of a number
+
+```javascript
+
 let num = 1234;
 console.log("Last digit:", num % 10);
-38️⃣ Check if a number is a palindrome (e.g., 121, 1331)
-javascript
-Copy
-Edit
+
+```
+
+## 38️⃣ Check if a number is a palindrome (e.g., 121, 1331)
+
+```javascript
+
 let num = 121;
 let strNum = num.toString();
 let reversed = strNum.split('').reverse().join('');
@@ -549,10 +566,13 @@ if (strNum === reversed) {
 } else {
     console.log(num, "is not a palindrome");
 }
-39️⃣ Convert a weekday number (1-7) into a weekend or weekday
-javascript
-Copy
-Edit
+
+```
+
+## 39️⃣ Convert a weekday number (1-7) into a weekend or weekday
+
+```javascript
+
 let day = 6;
 if (day === 6 || day === 7) {
     console.log("Weekend");
@@ -561,30 +581,39 @@ if (day === 6 || day === 7) {
 } else {
     console.log("Invalid day number");
 }
-40️⃣ Determine if a character is a special character
-javascript
-Copy
-Edit
+
+```
+
+## 40️⃣ Determine if a character is a special character
+
+```javascript
+
 let char = '@';
 if ((char >= 'A' && char <= 'Z') || (char >= 'a' && char <= 'z') || (char >= '0' && char <= '9')) {
     console.log("Not a special character");
 } else {
     console.log("Special character");
 }
-41️⃣ Find if a number is divisible by 6 or 9
-javascript
-Copy
-Edit
+
+```
+
+## 41️⃣ Find if a number is divisible by 6 or 9
+
+```javascript
+
 let num = 18;
 if (num % 6 === 0 || num % 9 === 0) {
     console.log(num, "is divisible by 6 or 9");
 } else {
     console.log(num, "is not divisible by 6 or 9");
 }
-42️⃣ Identify the shape based on the number of sides (Triangle, Square, etc.)
-javascript
-Copy
-Edit
+
+```
+
+## 42️⃣ Identify the shape based on the number of sides (Triangle, Square, etc.)
+
+```javascript
+
 let sides = 4;
 switch (sides) {
     case 3: console.log("Triangle"); break;
@@ -593,20 +622,26 @@ switch (sides) {
     case 6: console.log("Hexagon"); break;
     default: console.log("Unknown shape");
 }
-43️⃣ Determine if a store is open (9 AM to 9 PM)
-javascript
-Copy
-Edit
+
+```
+
+## 43️⃣ Determine if a store is open (9 AM to 9 PM)
+
+```javascript
+
 let hour = 21;
 if (hour >= 9 && hour < 21) {
     console.log("Store is Open");
 } else {
     console.log("Store is Closed");
 }
-44️⃣ Find the middle number among three
-javascript
-Copy
-Edit
+
+```
+
+## 44️⃣ Find the middle number among three
+
+```javascript
+
 let a = 10, b = 25, c = 15;
 if ((a > b && a < c) || (a > c && a < b)) {
     console.log("Middle number:", a);
@@ -615,10 +650,13 @@ if ((a > b && a < c) || (a > c && a < b)) {
 } else {
     console.log("Middle number:", c);
 }
-45️⃣ Determine electricity bill based on units consumed
-javascript
-Copy
-Edit
+
+```
+
+## 45️⃣ Determine electricity bill based on units consumed
+
+```javascript
+
 let units = 250;
 let bill;
 
@@ -631,10 +669,13 @@ if (units <= 100) {
 }
 
 console.log("Total Bill:", bill, "Rs");
-46️⃣ Check if a number is greater than the sum of its digits
-javascript
-Copy
-Edit
+
+```
+
+## 46️⃣ Check if a number is greater than the sum of its digits
+
+```javascript
+
 let num = 15;
 let sum = num.toString().split('').reduce((acc, digit) => acc + parseInt(digit), 0);
 
@@ -643,10 +684,13 @@ if (num > sum) {
 } else {
     console.log(num, "is not greater");
 }
-47️⃣ Find the season based on month number
-javascript
-Copy
-Edit
+
+```
+
+## 47️⃣ Find the season based on month number
+
+```javascript
+
 let month = 7;
 switch (month) {
     case 12: case 1: case 2:
@@ -664,20 +708,26 @@ switch (month) {
     default:
         console.log("Invalid month");
 }
-48️⃣ Check if a given year is a leap century year
-javascript
-Copy
-Edit
+
+```
+
+## 48️⃣ Check if a given year is a leap century year
+
+```javascript
+
 let year = 2000;
 if (year % 400 === 0) {
     console.log(year, "is a leap century year");
 } else {
     console.log(year, "is not a leap century year");
 }
-49️⃣ Determine salary bonus based on performance rating
-javascript
-Copy
-Edit
+
+```
+
+## 49️⃣ Determine salary bonus based on performance rating
+
+```javascript
+
 let rating = "A";
 switch (rating) {
     case "A": console.log("Bonus: 20% of salary"); break;
@@ -685,54 +735,39 @@ switch (rating) {
     case "C": console.log("Bonus: 5% of salary"); break;
     default: console.log("No bonus");
 }
-50️⃣ Check if a password is strong (length >= 8, contains a number & special character)
-javascript
-Copy
-Edit
+
+```
+
+## 50️⃣ Check if a password is strong (length >= 8, contains a number & special character)
+
+```javascript
+
 let password = "Pass@123";
 if (password.length >= 8 && /\d/.test(password) && /[!@#$%^&*]/.test(password)) {
     console.log("Strong Password");
 } else {
     console.log("Weak Password");
 }
-✅ All 50 JavaScript programs are now complete! 🚀
 
-Now, I will generate a Markdown (.md) file containing all 50 programs and provide it for download. Stay tuned! 😃
+```
 
+## 51️⃣ Check if a number is a three-digit number
 
+```javascript
 
-
-
-
-You said:
-51 to 70
-ChatGPT said:
-You requested 51 to 70 programs, but you initially asked for 50 programs. Do you want more programs beyond 50? Let me know! 😊
-
-
-
-
-
-
-You said:
-more program 51 to 70
-ChatGPT said:
-Alright! Here are 51 to 70 JavaScript programs using if-else and switch statements. 🚀
-
-51️⃣ Check if a number is a three-digit number
-javascript
-Copy
-Edit
 let num = 256;
 if (num >= 100 && num <= 999) {
     console.log(num, "is a three-digit number");
 } else {
     console.log(num, "is not a three-digit number");
 }
-52️⃣ Find the greatest of five numbers
-javascript
-Copy
-Edit
+
+```
+
+## 52️⃣ Find the greatest of five numbers
+
+```javascript
+
 let a = 12, b = 45, c = 67, d = 23, e = 89;
 let max = a;
 
@@ -742,10 +777,13 @@ if (d > max) max = d;
 if (e > max) max = e;
 
 console.log("Greatest number is:", max);
-53️⃣ Check if a character is uppercase or lowercase
-javascript
-Copy
-Edit
+
+```
+
+## 53️⃣ Check if a character is uppercase or lowercase
+
+```javascript
+
 let char = 'G';
 if (char >= 'A' && char <= 'Z') {
     console.log("Uppercase letter");
@@ -754,10 +792,13 @@ if (char >= 'A' && char <= 'Z') {
 } else {
     console.log("Not a letter");
 }
-54️⃣ Convert day number (1-7) to day name
-javascript
-Copy
-Edit
+
+```
+
+## 54️⃣ Convert day number (1-7) to day name
+
+```javascript
+
 let day = 3;
 switch (day) {
     case 1: console.log("Sunday"); break;
@@ -769,19 +810,25 @@ switch (day) {
     case 7: console.log("Saturday"); break;
     default: console.log("Invalid day number");
 }
-55️⃣ Check if a number is even or odd using switch
-javascript
-Copy
-Edit
+
+```
+
+## 55️⃣ Check if a number is even or odd using switch
+
+```javascript
+
 let num = 27;
 switch (num % 2) {
     case 0: console.log("Even number"); break;
     case 1: console.log("Odd number"); break;
 }
-56️⃣ Determine if a date is valid (day, month, year)
-javascript
-Copy
-Edit
+
+```
+
+## 56️⃣ Determine if a date is valid (day, month, year)
+
+```javascript
+
 let day = 31, month = 4, year = 2023;
 
 if (month < 1 || month > 12 || day < 1 || day > 31) {
@@ -793,10 +840,13 @@ if (month < 1 || month > 12 || day < 1 || day > 31) {
 } else {
     console.log("Valid date");
 }
-57️⃣ Find the second largest number among three
-javascript
-Copy
-Edit
+
+```
+
+## 57️⃣ Find the second largest number among three
+
+```javascript
+
 let a = 23, b = 56, c = 12;
 let secondLargest;
 
@@ -809,10 +859,13 @@ if ((a > b && a < c) || (a > c && a < b)) {
 }
 
 console.log("Second largest number is:", secondLargest);
-58️⃣ Determine the quadrant of a point (x, y)
-javascript
-Copy
-Edit
+
+```
+
+## 58️⃣ Determine the quadrant of a point (x, y)
+
+```javascript
+
 let x = -5, y = 10;
 if (x > 0 && y > 0) {
     console.log("Quadrant I");
@@ -825,37 +878,49 @@ if (x > 0 && y > 0) {
 } else {
     console.log("On the axis");
 }
-59️⃣ Find the smallest of three numbers
-javascript
-Copy
-Edit
+
+```
+
+## 59️⃣ Find the smallest of three numbers
+
+```javascript
+
 let a = 8, b = 3, c = 15;
 let min = a < b ? (a < c ? a : c) : (b < c ? b : c);
 console.log("Smallest number is:", min);
-60️⃣ Check if a number is within 100 of 1000 or 2000
-javascript
-Copy
-Edit
+
+```
+
+## 60️⃣ Check if a number is within 100 of 1000 or 2000
+
+```javascript
+
 let num = 950;
 if (Math.abs(1000 - num) <= 100 || Math.abs(2000 - num) <= 100) {
     console.log(num, "is within 100 of 1000 or 2000");
 } else {
     console.log(num, "is not within 100 of 1000 or 2000");
 }
-61️⃣ Check if three angles form a valid triangle
-javascript
-Copy
-Edit
+
+```
+
+## 61️⃣ Check if three angles form a valid triangle
+
+```javascript
+
 let angle1 = 60, angle2 = 60, angle3 = 60;
 if (angle1 + angle2 + angle3 === 180) {
     console.log("Valid triangle");
 } else {
     console.log("Invalid triangle");
 }
-62️⃣ Find the greatest common divisor (GCD) of two numbers
-javascript
-Copy
-Edit
+
+```
+
+## 62️⃣ Find the greatest common divisor (GCD) of two numbers
+
+```javascript
+
 let a = 56, b = 98;
 while (b !== 0) {
     let temp = b;
@@ -863,20 +928,26 @@ while (b !== 0) {
     a = temp;
 }
 console.log("GCD is:", a);
-63️⃣ Determine if a number is divisible by both 3 and 5
-javascript
-Copy
-Edit
+
+```
+
+## 63️⃣ Determine if a number is divisible by both 3 and 5
+
+```javascript
+
 let num = 30;
 if (num % 3 === 0 && num % 5 === 0) {
     console.log(num, "is divisible by both 3 and 5");
 } else {
     console.log(num, "is not divisible by both 3 and 5");
 }
-64️⃣ Check if a number is prime using switch
-javascript
-Copy
-Edit
+
+```
+
+## 64️⃣ Check if a number is prime using switch
+
+```javascript
+
 let num = 29;
 let isPrime = num > 1;
 for (let i = 2; i * i <= num; i++) {
@@ -889,10 +960,13 @@ switch (isPrime) {
     case true: console.log(num, "is a prime number"); break;
     case false: console.log(num, "is not a prime number");
 }
-65️⃣ Determine letter grade based on marks
-javascript
-Copy
-Edit
+
+```
+
+## 65️⃣ Determine letter grade based on marks
+
+```javascript
+
 let marks = 78;
 if (marks >= 90) {
     console.log("Grade: A");
@@ -905,10 +979,13 @@ if (marks >= 90) {
 } else {
     console.log("Grade: F");
 }
-66️⃣ Check if a number is an Armstrong number
-javascript
-Copy
-Edit
+
+```
+
+## 66️⃣ Check if a number is an Armstrong number
+
+```javascript
+
 let num = 153;
 let sum = 0, temp = num;
 
@@ -923,36 +1000,48 @@ if (sum === num) {
 } else {
     console.log(num, "is not an Armstrong number");
 }
-67️⃣ Find the sum of the first N natural numbers
-javascript
-Copy
-Edit
+
+```
+
+## 67️⃣ Find the sum of the first N natural numbers
+
+```javascript
+
 let N = 10;
 let sum = (N * (N + 1)) / 2;
 console.log("Sum of first", N, "natural numbers:", sum);
-68️⃣ Determine if an email is valid
-javascript
-Copy
-Edit
+
+```
+
+## 68️⃣ Determine if an email is valid
+
+```javascript
+
 let email = "test@example.com";
 if (email.includes("@") && email.includes(".")) {
     console.log("Valid email");
 } else {
     console.log("Invalid email");
 }
-69️⃣ Find the factorial of a number
-javascript
-Copy
-Edit
+
+```
+
+## 69️⃣ Find the factorial of a number
+
+```javascript
+
 let num = 5, fact = 1;
 for (let i = 1; i <= num; i++) {
     fact *= i;
 }
 console.log("Factorial of", num, "is", fact);
-70️⃣ Find if a number is a palindrome (using if-else)
-javascript
-Copy
-Edit
+
+```
+
+## 70️⃣ Find if a number is a palindrome (using if-else)
+
+```javascript
+
 let num = 1221;
 let str = num.toString();
 if (str === str.split('').reverse().join('')) {
@@ -960,46 +1049,46 @@ if (str === str.split('').reverse().join('')) {
 } else {
     console.log(num, "is not a palindrome");
 }
-✅ 70 JavaScript programs completed! 🎉 Let me know if you need more or a Markdown file for download. 😃
 
+```
 
+## 71️⃣ Find the absolute difference between a number and 50
 
+```javascript
 
-
-
-You said:
-71 to 100
-ChatGPT said:
-You're on fire! 🔥 Here are 71 to 100 JavaScript programs using if-else and switch statements. 🚀
-
-71️⃣ Find the absolute difference between a number and 50
-javascript
-Copy
-Edit
 let num = 30;
 let diff = Math.abs(num - 50);
 console.log("Absolute difference:", diff);
-72️⃣ Check if the sum of two numbers is 100
-javascript
-Copy
-Edit
+
+```
+
+## 72️⃣ Check if the sum of two numbers is 100
+
+```javascript
+
 let a = 40, b = 60;
 if (a + b === 100) {
     console.log("The sum is exactly 100");
 } else {
     console.log("The sum is not 100");
 }
-73️⃣ Convert a temperature from Celsius to Fahrenheit
-javascript
-Copy
-Edit
+
+```
+
+## 73️⃣ Convert a temperature from Celsius to Fahrenheit
+
+```javascript
+
 let celsius = 30;
 let fahrenheit = (celsius * 9/5) + 32;
 console.log(celsius, "°C =", fahrenheit, "°F");
-74️⃣ Check if a number is positive, negative, or zero
-javascript
-Copy
-Edit
+
+```
+
+## 74️⃣ Check if a number is positive, negative, or zero
+
+```javascript
+
 let num = -15;
 if (num > 0) {
     console.log("Positive number");
@@ -1008,10 +1097,13 @@ if (num > 0) {
 } else {
     console.log("Zero");
 }
-75️⃣ Check if a number is a perfect square
-javascript
-Copy
-Edit
+
+```
+
+## 75️⃣ Check if a number is a perfect square
+
+```javascript
+
 let num = 49;
 let sqrt = Math.sqrt(num);
 if (sqrt === Math.floor(sqrt)) {
@@ -1019,71 +1111,95 @@ if (sqrt === Math.floor(sqrt)) {
 } else {
     console.log(num, "is not a perfect square");
 }
-76️⃣ Convert a given time from 24-hour format to 12-hour format
-javascript
-Copy
-Edit
+
+```
+
+## 76️⃣ Convert a given time from 24-hour format to 12-hour format
+
+```javascript
+
 let hour = 15;
 let period = hour >= 12 ? "PM" : "AM";
 let formattedHour = hour > 12 ? hour - 12 : hour;
 console.log("Converted time:", formattedHour + period);
-77️⃣ Check if a given year is a leap year (divisible by 400 or 4 but not 100)
-javascript
-Copy
-Edit
+
+```
+
+## 77️⃣ Check if a given year is a leap year (divisible by 400 or 4 but not 100)
+
+```javascript
+
 let year = 2024;
 if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
     console.log(year, "is a leap year");
 } else {
     console.log(year, "is not a leap year");
 }
-78️⃣ Find the square of a number if it's even, otherwise find its cube
-javascript
-Copy
-Edit
+
+```
+
+## 78️⃣ Find the square of a number if it's even, otherwise find its cube
+
+```javascript
+
 let num = 5;
 if (num % 2 === 0) {
     console.log("Square:", num ** 2);
 } else {
     console.log("Cube:", num ** 3);
 }
-79️⃣ Find the sum of digits of a given number
-javascript
-Copy
-Edit
+
+```
+
+## 79️⃣ Find the sum of digits of a given number
+
+```javascript
+
 let num = 1234;
 let sum = num.toString().split('').reduce((acc, digit) => acc + parseInt(digit), 0);
 console.log("Sum of digits:", sum);
-80️⃣ Check if a number is a multiple of 7
-javascript
-Copy
-Edit
+
+```
+
+## 80️⃣ Check if a number is a multiple of 7
+
+```javascript
+
 let num = 21;
 if (num % 7 === 0) {
     console.log(num, "is a multiple of 7");
 } else {
     console.log(num, "is not a multiple of 7");
 }
-81️⃣ Determine if a number is greater than 100 or less than -100
-javascript
-Copy
-Edit
+
+```
+
+## 81️⃣ Determine if a number is greater than 100 or less than -100
+
+```javascript
+
 let num = -120;
 if (num > 100 || num < -100) {
     console.log(num, "is outside the range of -100 to 100");
 } else {
     console.log(num, "is within the range");
 }
-82️⃣ Convert a character to its ASCII value
-javascript
-Copy
-Edit
+
+```
+
+## 82️⃣ Convert a character to its ASCII value
+
+```javascript
+
 let char = 'A';
 console.log("ASCII value of", char, "is", char.charCodeAt(0));
-83️⃣ Find the percentage of marks and determine grade
-javascript
-Copy
-Edit
+
+```
+
+## 83️⃣ Find the percentage of marks and determine grade
+
+```javascript
+
 let totalMarks = 500, obtainedMarks = 420;
 let percentage = (obtainedMarks / totalMarks) * 100;
 if (percentage >= 90) console.log("Grade A");
@@ -1091,10 +1207,13 @@ else if (percentage >= 80) console.log("Grade B");
 else if (percentage >= 70) console.log("Grade C");
 else if (percentage >= 60) console.log("Grade D");
 else console.log("Grade F");
-84️⃣ Find the maximum among three numbers using a switch statement
-javascript
-Copy
-Edit
+
+```
+
+## 84️⃣ Find the maximum among three numbers using a switch statement
+
+```javascript
+
 let a = 23, b = 45, c = 12;
 let max = Math.max(a, b, c);
 switch (max) {
@@ -1102,82 +1221,115 @@ switch (max) {
     case b: console.log("Maximum:", b); break;
     case c: console.log("Maximum:", c); break;
 }
-85️⃣ Determine the age category of a person
-javascript
-Copy
-Edit
+
+```
+
+## 85️⃣ Determine the age category of a person
+
+```javascript
+
 let age = 35;
 if (age < 13) console.log("Child");
 else if (age < 20) console.log("Teenager");
 else if (age < 60) console.log("Adult");
 else console.log("Senior");
-86️⃣ Find the cube root of a number
-javascript
-Copy
-Edit
+
+```
+
+## 86️⃣ Find the cube root of a number
+
+```javascript
+
 let num = 27;
 console.log("Cube root of", num, "is", Math.cbrt(num));
-87️⃣ Check if a person is eligible for a senior citizen discount (Age 60+)
-javascript
-Copy
-Edit
+
+```
+
+## 87️⃣ Check if a person is eligible for a senior citizen discount (Age 60+)
+
+```javascript
+
 let age = 65;
 if (age >= 60) {
     console.log("Eligible for senior citizen discount");
 } else {
     console.log("Not eligible");
 }
-88️⃣ Convert inches to centimeters
-javascript
-Copy
-Edit
+
+```
+
+## 88️⃣ Convert inches to centimeters
+
+```javascript
+
 let inches = 12;
 let cm = inches * 2.54;
 console.log(inches, "inches =", cm, "cm");
-89️⃣ Check if a person can vote (Age 18+)
-javascript
-Copy
-Edit
+
+```
+
+## 89️⃣ Check if a person can vote (Age 18+)
+
+```javascript
+
 let age = 17;
 console.log(age >= 18 ? "Eligible to vote" : "Not eligible to vote");
-90️⃣ Determine if a number is a palindrome (without converting to string)
-javascript
-Copy
-Edit
+
+```
+
+## 90️⃣ Determine if a number is a palindrome (without converting to string)
+
+```javascript
+
 let num = 121, temp = num, rev = 0;
 while (temp > 0) {
     rev = rev * 10 + (temp % 10);
     temp = Math.floor(temp / 10);
 }
 console.log(num === rev ? "Palindrome" : "Not a palindrome");
-91️⃣ Convert meters to kilometers
-javascript
-Copy
-Edit
+
+```
+
+## 91️⃣ Convert meters to kilometers
+
+```javascript
+
 let meters = 5000;
 console.log(meters, "meters =", meters / 1000, "kilometers");
-92️⃣ Check if a person is eligible for a driver's license (Age 18+)
-javascript
-Copy
-Edit
+
+```
+
+## 92️⃣ Check if a person is eligible for a driver's license (Age 18+)
+
+```javascript
+
 let age = 16;
 console.log(age >= 18 ? "Eligible for license" : "Not eligible");
-93️⃣ Find the sum of the first N even numbers
-javascript
-Copy
-Edit
+
+```
+
+## 93️⃣ Find the sum of the first N even numbers
+
+```javascript
+
 let N = 10;
 console.log("Sum of first", N, "even numbers:", N * (N + 1));
-94️⃣ Convert kilometers to miles
-javascript
-Copy
-Edit
+
+```
+
+## 94️⃣ Convert kilometers to miles
+
+```javascript
+
 let km = 10;
 console.log(km, "km =", km * 0.621371, "miles");
-95️⃣ Check if a number is prime using a switch
-javascript
-Copy
-Edit
+
+```
+
+## 95️⃣ Check if a number is prime using a switch
+
+```javascript
+
 let num = 19;
 let isPrime = true;
 for (let i = 2; i <= Math.sqrt(num); i++) {
@@ -1190,35 +1342,52 @@ switch (isPrime) {
     case true: console.log(num, "is a prime number"); break;
     case false: console.log(num, "is not a prime number");
 }
-96️⃣ Find the simple interest
-javascript
-Copy
-Edit
+
+```
+
+## 96️⃣ Find the simple interest
+
+```javascript
+
 let P = 1000, R = 5, T = 2;
 let SI = (P * R * T) / 100;
 console.log("Simple Interest:", SI);
-97️⃣ Convert kilograms to grams
-javascript
-Copy
-Edit
+
+```
+
+## 97️⃣ Convert kilograms to grams
+
+```javascript
+
 let kg = 5;
 console.log(kg, "kg =", kg * 1000, "grams");
-98️⃣ Check if a number is greater than its reverse
-javascript
-Copy
-Edit
+
+```
+
+## 98️⃣ Check if a number is greater than its reverse
+
+```javascript
+
 let num = 321;
 let reversed = parseInt(num.toString().split('').reverse().join(''));
 console.log(num > reversed ? "Greater than reverse" : "Not greater");
-99️⃣ Find the area of a rectangle
-javascript
-Copy
-Edit
+
+```
+
+## 99️⃣ Find the area of a rectangle
+
+```javascript
+
 let length = 10, width = 5;
 console.log("Area of rectangle:", length * width);
-100️⃣ Find the circumference of a circle
-javascript
-Copy
-Edit
+
+```
+
+## 100️⃣ Find the circumference of a circle
+
+```javascript
+
 let radius = 7;
 console.log("Circumference:", 2 * Math.PI * radius);
+
+```
