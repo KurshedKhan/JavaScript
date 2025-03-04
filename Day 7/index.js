@@ -57,15 +57,77 @@
 // ageChecker(argAge);
 
 // function with return keyword
-function add(num1,num2){
+// function add(num1,num2){
 
-  let total ;
-  total = num1 + num2;
-  return total;
-}
+//   let total ;
+//   total = num1 + num2;
+//   return total;
+// }
 
-let n1 = 10;
-let n2 = 20;
-console.log(add(n1,n2))
-let result = add(n1,n2);
-console.log(result);
+// let n1 = 10;
+// let n2 = 20;
+// console.log(add(n1,n2))
+// let result = add(n1,n2);
+// console.log(result);
+
+
+// function expression
+// const display = function(num1,num2){
+
+//   let total = num1 + num2;
+
+//   return total;
+
+// }
+
+// let result = display(10,30);
+// console.log(result);
+
+
+// function addition(num1=10,num2=20){
+
+//   let total = num1 + num2;
+
+//   return total;
+
+// }
+
+// let result = addition(30,50);
+// console.log(result);
+
+
+// const entry = function(age=18,name="guest"){
+
+//   if(age >= 18){
+//     console.log("you can entered in this website.",name)
+//   }
+//   else{
+//     console.log("you can not entered in this webstie.",name)
+//   }
+
+// }
+
+// entry(22);
+
+
+// // Arrow Function
+// const addition = (num1=10,num2=20)=>{
+
+//   let total = num1 + num2;
+
+//   return total;
+
+// }
+
+// let result = addition(30,50);
+// console.log(result);
+
+
+let total = (a,b) => a + b;
+console.log(total(10,20))
+
+// function total(a,b){
+//   total = a + b;
+//   console.log(total)
+// }
+// total(10,20)
