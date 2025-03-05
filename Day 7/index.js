@@ -80,54 +80,101 @@
 
 // }
 
-// let result = display(10,30);
-// console.log(result);
+// name()
+// // let result = display(10,30);
+// // console.log(result);
 
 
-// function addition(num1=10,num2=20){
+// // function addition(num1=10,num2=20){
 
-//   let total = num1 + num2;
+// //   let total = num1 + num2;
 
-//   return total;
+// //   return total;
 
+// // }
+
+// // let result = addition(30,50);
+// // console.log(result);
+
+
+// // const entry = function(age=18,name="guest"){
+
+// //   if(age >= 18){
+// //     console.log("you can entered in this website.",name)
+// //   }
+// //   else{
+// //     console.log("you can not entered in this webstie.",name)
+// //   }
+
+// // }
+
+// // entry(22);
+
+
+// // // Arrow Function
+// // const addition = (num1=10,num2=20)=>{
+
+// //   let total = num1 + num2;
+
+// //   return total;
+
+// // }
+
+// // let result = addition(30,50);
+// // console.log(result);
+
+
+// // let total = (a,b) => a + b;
+// // console.log(total(10,20))
+
+// // // function total(a,b){
+// // //   total = a + b;
+// // //   console.log(total)
+// // // }
+// // // total(10,20)
+
+// console.log("my console is running.")
+// console.log("my console is running.")
+// console.log("my console is running.")
+// console.log("my console is running.")
+// console.log("my console is running.")
+// console.log("my console is running.")
+// console.log("my console is running.")
+// console.log("my console is running.")
+// console.log("my console is running.")
+// function name(){
+//   // variable declaration
+  
+//   // variable assian
+//   console.log("my console is running but use of function calling part");
+//   // conditional statement
+//   // if else
+//   // switch
+
+//   // Array 
+
+//   // operator 
 // }
 
-// let result = addition(30,50);
-// console.log(result);
+// name()
 
 
-// const entry = function(age=18,name="guest"){
 
-//   if(age >= 18){
-//     console.log("you can entered in this website.",name)
-//   }
-//   else{
-//     console.log("you can not entered in this webstie.",name)
-//   }
-
+// function display(para1 = 10){
+//   num1 = 10;
+//   console.log(num1)
 // }
 
-// entry(22);
+// let num1 = 20;
 
+// display(num1)
 
-// // Arrow Function
-// const addition = (num1=10,num2=20)=>{
+let age = 21;
 
-//   let total = num1 + num2;
+if(age > 19){
+  let age = 18;
+  console.log(age);
+  name1 = "mohan";
+}
 
-//   return total;
-
-// }
-
-// let result = addition(30,50);
-// console.log(result);
-
-
-let total = (a,b) => a + b;
-console.log(total(10,20))
-
-// function total(a,b){
-//   total = a + b;
-//   console.log(total)
-// }
-// total(10,20)
+console.log(name1)
