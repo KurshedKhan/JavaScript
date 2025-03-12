@@ -24,11 +24,17 @@
 //    }
 // }
 
-for(let i = 1 ; i < 5 ; i++){
+// for(let i = 1 ; i < 5 ; i++){
   
-  for(let j = 0 ; j < i ; j++){
-    document.write("*");
-  }
+//   for(let j = 0 ; j < i ; j++){
+//     document.write("*");
+//   }
 
-  document.writeln("<br>");
+//   document.writeln("<br>");
+// }
+
+let total = 0;
+for(let i = 1 ; i <= 50 ; i++){
+  total = total + i
 }
+console.log(total)

@@ -644,3 +644,342 @@ function longestCommonPrefix(strs) {
     return strs.reduce((prev, next) => prev.slice(0, next.length).split('').filter((c, i) => c === next[i]).join(''));
 }
 ```
+
+## Task 71: Find the longest palindrome substring
+```js
+function longestPalindrome(s) {
+    let res = "";
+    for (let i = 0; i < s.length; i++) {
+        for (let j = i; j < s.length; j++) {
+            let substr = s.substring(i, j + 1);
+            if (substr === substr.split('').reverse().join('') && substr.length > res.length) {
+                res = substr;
+            }
+        }
+    }
+    return res;
+}
+console.log(longestPalindrome("babad"));
+```
+
+## Task 72: Check if a string can be rearranged to form a palindrome
+```js
+function canFormPalindrome(str) {
+    let freq = {};
+    for (let char of str) {
+        freq[char] = (freq[char] || 0) + 1;
+    }
+    let oddCount = 0;
+    for (let key in freq) {
+        if (freq[key] % 2 !== 0) oddCount++;
+    }
+    return oddCount <= 1;
+}
+console.log(canFormPalindrome("civic"));
+```
+
+## Task 73: Flatten a nested array
+```js
+function flattenArray(arr) {
+    return arr.flat(Infinity);
+}
+console.log(flattenArray([1, [2, [3, [4, 5]]]]));
+```
+
+## Task 74: Find the first missing positive number
+```js
+function firstMissingPositive(nums) {
+    let set = new Set(nums);
+    let i = 1;
+    while (set.has(i)) i++;
+    return i;
+}
+console.log(firstMissingPositive([3, 4, -1, 1]));
+```
+
+## Task 75: Find all permutations of a string
+```js
+function permute(str, prefix = "") {
+    if (str.length === 0) console.log(prefix);
+    for (let i = 0; i < str.length; i++) {
+        permute(str.substring(0, i) + str.substring(i + 1), prefix + str[i]);
+    }
+}
+permute("abc");
+```
+
+## Task 76: Generate Pascal’s Triangle
+```js
+function generatePascal(n) {
+    let res = [[1]];
+    for (let i = 1; i < n; i++) {
+        let prevRow = res[i - 1];
+        let row = [1];
+        for (let j = 1; j < prevRow.length; j++) {
+            row.push(prevRow[j - 1] + prevRow[j]);
+        }
+        row.push(1);
+        res.push(row);
+    }
+    return res;
+}
+console.log(generatePascal(5));
+```
+
+## Task 77: Check if an array is a valid mountain array
+```js
+function isMountainArray(arr) {
+    if (arr.length < 3) return false;
+    let i = 0, n = arr.length;
+    while (i + 1 < n && arr[i] < arr[i + 1]) i++;
+    if (i === 0 || i === n - 1) return false;
+    while (i + 1 < n && arr[i] > arr[i + 1]) i++;
+    return i === n - 1;
+}
+console.log(isMountainArray([0, 3, 2, 1]));
+
+```
+
+## Task 78: Sort an array of 0s, 1s, and 2s
+```js
+function sortColors(arr) {
+    let low = 0, mid = 0, high = arr.length - 1;
+    while (mid <= high) {
+        if (arr[mid] === 0) [arr[low++], arr[mid++]] = [arr[mid], arr[low]];
+        else if (arr[mid] === 1) mid++;
+        else [arr[mid], arr[high--]] = [arr[high], arr[mid]];
+    }
+    return arr;
+}
+console.log(sortColors([2, 0, 2, 1, 1, 0]));
+```
+## Task 79: Check if two strings are rotations of each other
+```js
+function isRotation(s1, s2) {
+    return s1.length === s2.length && (s1 + s1).includes(s2);
+}
+console.log(isRotation("waterbottle", "erbottlewat"));
+
+```
+
+## Task 80: Check if an array contains a subarray with a sum of zero
+```js
+function hasZeroSumSubarray(arr) {
+    let sumSet = new Set(), sum = 0;
+    for (let num of arr) {
+        sum += num;
+        if (sum === 0 || sumSet.has(sum)) return true;
+        sumSet.add(sum);
+    }
+    return false;
+}
+console.log(hasZeroSumSubarray([4, 2, -3, 1, 6]));
+
+```
+## Task 81: Find the second largest number in an array
+```js
+function secondLargest(arr) {
+    let first = -Infinity, second = -Infinity;
+    for (let num of arr) {
+        if (num > first) {
+            second = first;
+            first = num;
+        } else if (num > second && num !== first) {
+            second = num;
+        }
+    }
+    return second === -Infinity ? null : second;
+}
+console.log(secondLargest([10, 20, 4, 45, 99]));
+```
+
+## Task 82: Check if two arrays are equal
+```js
+function areArraysEqual(arr1, arr2) {
+    if (arr1.length !== arr2.length) return false;
+    arr1.sort(); arr2.sort();
+    return arr1.every((val, index) => val === arr2[index]);
+}
+console.log(areArraysEqual([1, 2, 3], [3, 2, 1]));
+```
+## Task 83: Find the sum of all even numbers in an array
+```js
+function sumEvenNumbers(arr) {
+    return arr.reduce((sum, num) => num % 2 === 0 ? sum + num : sum, 0);
+}
+console.log(sumEvenNumbers([1, 2, 3, 4, 5, 6]));
+```
+## Task 84: Find factorial using recursion
+```js
+function factorial(n) {
+    return n === 0 ? 1 : n * factorial(n - 1);
+}
+console.log(factorial(5));
+```
+## Task 85: Find the GCD of two numbers
+```js
+function gcd(a, b) {
+    return b === 0 ? a : gcd(b, a % b);
+}
+console.log(gcd(56, 98));
+```
+## Task 86: Find the LCM of two numbers
+```js
+function lcm(a, b) {
+    return (a * b) / gcd(a, b);
+}
+console.log(lcm(12, 15));
+```
+## Task 87: Find all prime numbers up to a given number
+```js
+function findPrimes(n) {
+    let primes = [];
+    for (let num = 2; num <= n; num++) {
+        if (isPrime(num)) primes.push(num);
+    }
+    return primes;
+}
+function isPrime(num) {
+    if (num < 2) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+    }
+    return true;
+}
+console.log(findPrimes(20));
+```
+## Task 88: Reverse a number
+```js
+function reverseNumber(num) {
+    return parseInt(num.toString().split('').reverse().join('')) * Math.sign(num);
+}
+console.log(reverseNumber(12345));
+```
+## Task 89: Check if a number is an Armstrong number
+```js
+function isArmstrong(num) {
+    let sum = 0, temp = num, digits = num.toString().length;
+    while (temp > 0) {
+        let digit = temp % 10;
+        sum += Math.pow(digit, digits);
+        temp = Math.floor(temp / 10);
+    }
+    return sum === num;
+}
+console.log(isArmstrong(153));
+```
+## Task 90: Convert Celsius to Fahrenheit and vice versa
+```js
+function convertTemperature(value, unit) {
+    if (unit === 'C') return (value * 9/5) + 32; // Celsius to Fahrenheit
+    if (unit === 'F') return (value - 32) * 5/9; // Fahrenheit to Celsius
+    return null;
+}
+console.log(convertTemperature(100, 'C')); // Convert 100°C to °F
+console.log(convertTemperature(212, 'F')); // Convert 212°F to °C
+```
+
+## Task 91: Find the maximum difference between any two elements in an array
+```js
+function maxDifference(arr) {
+    if (arr.length < 2) return 0;
+    let minVal = arr[0], maxDiff = 0;
+    for (let num of arr) {
+        if (num < minVal) minVal = num;
+        maxDiff = Math.max(maxDiff, num - minVal);
+    }
+    return maxDiff;
+}
+console.log(maxDifference([2, 3, 10, 6, 4, 8, 1]));
+```
+## Task 92: Count vowels and consonants in a string
+```js
+function countVowelsConsonants(str) {
+    let vowels = "aeiouAEIOU", vCount = 0, cCount = 0;
+    for (let char of str) {
+        if (/[a-zA-Z]/.test(char)) {
+            vowels.includes(char) ? vCount++ : cCount++;
+        }
+    }
+    return { vowels: vCount, consonants: cCount };
+}
+console.log(countVowelsConsonants("Hello World!"));
+```
+## Task 93: Find the longest word in a sentence
+```js
+function longestWord(sentence) {
+    return sentence.split(" ").reduce((longest, word) => word.length > longest.length ? word : longest, "");
+}
+console.log(longestWord("The quick brown fox jumps over the lazy dog"));
+```
+## Task 94: Check if two strings are anagrams
+```js
+function areAnagrams(str1, str2) {
+    return str1.split("").sort().join("") === str2.split("").sort().join("");
+}
+console.log(areAnagrams("listen", "silent"));
+```
+## Task 95: Find the missing number in an array of 1 to N
+```js
+function findMissingNumber(arr, n) {
+    let sumN = (n * (n + 1)) / 2;
+    let sumArr = arr.reduce((sum, num) => sum + num, 0);
+    return sumN - sumArr;
+}
+console.log(findMissingNumber([1, 2, 4, 5, 6], 6));
+```
+## Task 96: Validate an email address
+```js
+function isValidEmail(email) {
+    let regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return regex.test(email);
+}
+console.log(isValidEmail("example@example.com"));
+```
+## Task 97: Count occurrences of each word in a string
+```js
+function wordCount(str) {
+    let words = str.toLowerCase().match(/\w+/g);
+    return words.reduce((count, word) => {
+        count[word] = (count[word] || 0) + 1;
+        return count;
+    }, {});
+}
+console.log(wordCount("This is a test. This test is only a test."));
+```
+## Task 98: Generate Fibonacci series up to N terms
+```js
+function fibonacci(n) {
+    let series = [0, 1];
+    for (let i = 2; i < n; i++) {
+        series.push(series[i - 1] + series[i - 2]);
+    }
+    return series.slice(0, n);
+}
+console.log(fibonacci(10));
+```
+## Task 99: Shuffle an array randomly
+```js
+function shuffleArray(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+}
+console.log(shuffleArray([1, 2, 3, 4, 5]));
+```
+## Task 100: Find the intersection of two arrays
+```js
+function arrayIntersection(arr1, arr2) {
+    return arr1.filter(value => arr2.includes(value));
+}
+console.log(arrayIntersection([1, 2, 3, 4], [3, 4, 5, 6]));
+```
+## Task 101: Find the union of two arrays
+```js
+function arrayUnion(arr1, arr2) {
+    return [...new Set([...arr1, ...arr2])];
+}
+console.log(arrayUnion([1, 2, 3, 4], [3, 4, 5, 6]));
+```
