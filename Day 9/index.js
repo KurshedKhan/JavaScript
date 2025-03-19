@@ -35,22 +35,61 @@
 // console.log(names1);
 
 
-let names = ["mohan","sohan","rohan","ram","Shayam"];
-names.push("Naresh");
-console.log(names);
-console.log(names.length)
-console.log(names.push("suresh","Ramesh","Naresh"));
-console.log(names)
-console.log(names.pop())
-console.log(names);
+// let names = ["mohan","sohan","rohan","ram","Shayam"];
+// names.push("Naresh");
+// console.log(names);
+// console.log(names.length)
+// console.log(names.push("suresh","Ramesh","Naresh"));
+// console.log(names)
+// console.log(names.pop())
+// console.log(names);
 
-let homelist = [];
-console.log(homelist.pop());
-console.log(homelist);
+// let homelist = [];
+// console.log(homelist.pop());
+// console.log(homelist);
 
-names.unshift("komal");
-console.log(names);
-console.log(names.unshift());
+// names.unshift("komal");
+// console.log(names);
+// console.log(names.unshift());
 
-names.shift();
-console.log(names);
+// names.shift();
+// console.log(names);
+
+// let numbers1 = [1,2,3,4,5,6];
+// console.log(numbers)
+
+// let first = [...numbers];
+
+// console.log(first)
+
+
+// let [kuldeep,second,...rest] = numbers;
+// console.log(kuldeep) // output : 1
+// console.log(second) // output : 2
+// console.log(rest) // output : 3,4,5,6
+
+// let [first,second,third,...rest] = numbers;
+// console.log(rest);
+// console.log(rest.push(" "));
+// console.log(rest)
+
+
+// let numbers1 = [1,2,3,4,5,6];
+// let numbers2 = [2,3,4,5,6,8,...numbers1,...numbers1];
+// console.log(numbers2)
+
+
+// for(let i = (numbers2.length-1) ;  i >= 0 ; i--){
+//   if(i === (numbers2.length-4)){
+//     break;
+//   }
+//   console.log(numbers2[i]);
+// }
+
+let colors = ["red", "blue", "green", "yellow", "purple"];
+
+let newColors = colors.slice(2,4); /// output : ["green","yellow"]
+console.log(newColors)
+
+let copyColors = colors.slice(3,4);
+console.log(copyColors)
