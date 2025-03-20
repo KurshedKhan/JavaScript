@@ -86,10 +86,83 @@
 //   console.log(numbers2[i]);
 // }
 
-let colors = ["red", "blue", "green", "yellow", "purple"];
+// let colors = ["red", "blue", "green", "yellow", "purple"];
 
-let newColors = colors.slice(2,4); /// output : ["green","yellow"]
-console.log(newColors)
+// let newColors = colors.slice(2,4); /// output : ["green","yellow"]
+// console.log(newColors)
 
-let copyColors = colors.slice(3,4);
-console.log(copyColors)
+// let copyColors = colors.slice(3,4);
+// console.log(copyColors)
+
+//  let colors = ["red", "blue", "green", "yellow", "purple"];
+
+//  colors.forEach(
+//   (value,index,array) => {
+//     console.log(value,index,array)
+//   }
+//  )
+
+
+// let marks = [23,65,76,89,98];
+
+// let total = 0 ;
+
+// marks.forEach((ele)=>{
+//   total += ele;
+// });
+
+// console.log(total);
+
+
+// let salary = [20000,15000,5000,30000];
+// let incSlaray = [];
+
+// salary.forEach((value,index,array) => {
+
+//   let ins = value + 5000;
+//   incSlaray.push(ins);
+
+// })
+// console.log(salary)
+// console.log(incSlaray)
+
+
+// let colors = ["red", "blue", "green", "yellow", "purple"];
+
+// colors.forEach(function(value,index,array){
+//   if(value === "yellow"){
+//     console.log(`Color Name in list : ${value} = Yellow`);
+//   }
+//   else{
+//     console.log(`Color Name in list : ${value}`)
+//   }
+// })
+
+
+// let oddEven = [10,20,30,12,34,33,35,78];
+// let odd = [];
+// let even = [];
+// oddEven.forEach(function(value){
+//   if(value % 2 === 0){
+//     even.push(value);
+//   }
+//   else{
+//     odd.push(value);
+//   }
+// })
+
+
+let oddEven = [10,20,30,12,34,33,35,78];
+let odd = [];
+let even = [];
+oddEven.forEach((value)=>{
+  if(value % 2 === 0){
+    even.push(value);
+  }
+  else{
+    odd.push(value);
+  }
+})
+console.log("Common Array ",oddEven);
+console.log("Odd : ",odd);
+console.log("Even : ",even);
