@@ -152,17 +152,76 @@
 // })
 
 
-let oddEven = [10,20,30,12,34,33,35,78];
-let odd = [];
-let even = [];
-oddEven.forEach((value)=>{
-  if(value % 2 === 0){
-    even.push(value);
+// let oddEven = [10,20,30,12,34,33,35,78];
+// let odd = [];
+// let even = [];
+// oddEven.forEach((value)=>{
+//   if(value % 2 === 0){
+//     even.push(value);
+//   }
+//   else{
+//     odd.push(value);
+//   }
+// })
+// console.log("Common Array ",oddEven);
+// console.log("Odd : ",odd);
+// console.log("Even : ",even);
+
+
+// let oddEven = [10,20,30,12,34,33,35,78];
+
+// let multiArr = oddEven.map((value) => { 
+//   return  value * 2
+// });
+
+// console.log(multiArr);
+
+// let oddEven = [10,20,30,12,34,33,35,78];
+
+// let multiArr = oddEven.map((value) => { 
+//   if(value % 2 != 0){
+//     return false;
+//   }
+//   else{
+//     return true;
+//   }
+// });
+
+// console.log(multiArr);
+
+// let colors = ["red", "blue", "green", "yellow", "purple"];
+
+// let colorsCap = colors.map((value)=>{
+//   return value.toUpperCase();
+// })
+
+// console.log(colorsCap)
+
+
+// let oddEven = [10,20,30,12,34,33,35,78];
+
+// let even = oddEven.filter((value)=>{
+//   if(value % 2 == 0 ){
+//     return value;
+//   }
+// })
+
+// console.log(even);
+
+// let odd = oddEven.filter((value)=>{
+//   if(value % 2 != 0 ){
+//     return value;
+//   }
+// })
+
+// console.log(odd);
+
+
+const mixedArray = [0, "hello", false, 42, "", null, "JavaScript",true ,1,false ];
+
+let arr = mixedArray.filter((value)=>{
+  if(value === false ||){
+
   }
-  else{
-    odd.push(value);
-  }
-})
-console.log("Common Array ",oddEven);
-console.log("Odd : ",odd);
-console.log("Even : ",even);
+});
+console.log(arr);
