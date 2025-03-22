@@ -217,11 +217,56 @@
 // console.log(odd);
 
 
-const mixedArray = [0, "hello", false, 42, "", null, "JavaScript",true ,1,false ];
+// const mixedArray = [0, "hello", false, 42, "", null, "JavaScript",true ,1,false ];
 
-let arr = mixedArray.filter((value)=>{
-  if(value === false ||){
+// let arr = mixedArray.filter((value)=>{
+//   if(value === false ||){
 
-  }
-});
-console.log(arr);
+//   });
+// console.log(arr);
+
+
+// let numbers = [200,-400,100,49,-300,58];
+
+// let result = numbers.reduce(
+//   (acc,CurrentValue)=>{
+//     return acc + CurrentValue;
+//   },100
+// )
+
+// console.log(result);
+
+
+// let arr = [33,3,4,55];
+
+//   let startingValue = arr[0]; /// output : 33
+
+//   for(let i = 1 ; i < arr.length ; i++){
+//         // 33           // 55
+//     if(startingValue < arr[i]){
+
+//       startingValue = arr[i]
+
+//     }
+//   }
+
+// console.log(startingValue);
+
+
+let arr = [33,3,4,55];
+
+let max = arr.reduce((acc,currentValue)=>{
+
+  if(acc < currentValue){
+
+   acc = currentValue;
+
+}
+
+},arr[0]);
+
+console.log(max);
+
+
+
+
