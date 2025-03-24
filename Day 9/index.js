@@ -253,20 +253,39 @@
 // console.log(startingValue);
 
 
-let arr = [33,3,4,55];
+// let arr = [33,3,4,55];
 
-let max = arr.reduce((acc,currentValue)=>{
+// let max = arr.reduce((acc,currentValue)=>{
 
-  if(acc < currentValue){
+//   if(acc < currentValue){
 
-   acc = currentValue;
+//    acc = currentValue;
 
-}
+// }
+// return acc;
 
-},arr[0]);
+// },arr[0]);
 
-console.log(max);
-
-
+// console.log(max);
 
 
+
+let names = ["mohan","rohan","sohan","rohan","ram","Shayam"];
+// console.log(Array.isArray(names));
+
+// console.log( typeof names.toString() );
+
+
+// let numbers = [1,3,5,7,12,4,5,2,3,4,5,45,43,3];
+
+// console.log(numbers.findLastIndex((ele)=>{
+//   if(ele%2 != 0){
+//     return ele;
+//   }
+// }));
+
+
+console.log(names.lastIndexOf("rohan"));  
+console.log(names.indexOf("rohan"));  
+console.log(names.includes("rohan"));  
+console.log(names.includes("roha"));  
