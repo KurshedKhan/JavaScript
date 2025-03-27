@@ -83,25 +83,79 @@
 // console.log(stu);
 
 
-function Student(name,age,roll,ClassName){
+// function Student(name,age,roll,ClassName){
+//   this.name = name;
+//   this.ClassName = ClassName;
+//   this.age = age;
+//   this.roll = roll;
+// }
+
+// Student.prototype.greet = function(){
+
+//   console.log("Hello, my name is " + this.name);
+
+// }
+
+// let stu = new Student("mohan",21,101,"12th");
+// let stu1 = new Student("sohan",22,102,"12th");
+// console.log(stu);
+// stu.greet();
+
+
+// console.log(stu.__proto__);
+// console.log(stu.__proto__.__proto__);
+// console.log(stu.__proto__.__proto__.__proto__);
+
+
+
+// Revision 
+
+// function studentDetails(name,age,roll,section){
+//   this.name = name;
+//   this.age = age;
+//   this.roll = roll;
+//   this.section = section;
+// }
+
+// // studentDetails.prototype.greet = function(){
+// //   console.log(`Hello your name is ${this.name} \nAge : ${this.age} \nRoll No. : ${this.roll} \nClass Name : ${this.section}`)
+// // }
+// studentDetails.__proto__.__proto__.greet = function(){
+//     console.log(`Hello your name is ${this.name} \nAge : ${this.age} \nRoll No. : ${this.roll} \nClass Name : ${this.section}`)
+//   }
+
+// let student1 = new studentDetails("mohan",21,101,"12th");
+// let student2 = new studentDetails("ketan",21,102,"12th");
+
+// student1.greet();
+// console.log(student1)
+// console.log(student2)
+
+
+function Animal(name){
   this.name = name;
-  this.ClassName = ClassName;
-  this.age = age;
-  this.roll = roll;
 }
 
-Student.prototype.greet = function(){
-
-  console.log("Hello, my name is " + this.name);
-
+Animal.prototype.speak = function(){
+  console.log(`${this.name} make a sound`)
 }
 
-let stu = new Student("mohan",21,101,"12th");
-let stu1 = new Student("sohan",22,102,"12th");
-console.log(stu);
-stu.greet();
+function Dog(name,breed){
+  Animal.call(this,name);
+  this.breed = breed;
+}
+
+Dog.prototype = Object.create(Animal.prototype); // to use prototype for dog constructor
+Dog.prototype.constructor = Dog; // create a construtor for dog
+
+let Ani1 = new Animal("Lion");
+console.log(Ani1);
+// Ani1.speak();
+
+Dog.prototype.bark = function(){
+  console.log(`${this.name} "Barks".`);
+}
 
 
-console.log(stu.__proto__);
-console.log(stu.__proto__.__proto__);
-console.log(stu.__proto__.__proto__.__proto__);
+let d1 = new Dog("Tommy","Labrador");
+console.log(d1);
