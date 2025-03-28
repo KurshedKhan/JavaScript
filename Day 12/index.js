@@ -159,3 +159,7 @@ Dog.prototype.bark = function(){
 
 let d1 = new Dog("Tommy","Labrador");
 console.log(d1);
+
+d1.bark();
+d1.speak();
+Ani1.speak()
