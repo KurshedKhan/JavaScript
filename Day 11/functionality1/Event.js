@@ -11,7 +11,7 @@ let body = document.getElementById("body");
 
 // }
 
-button.addEventListener("dblclick",function(){
+button.addEventListener("click",function(){
   let age = prompt("Enter your age :");
   if(age >= 18){
     text.innerText = `You are Eligible for vote : ${age} `;
