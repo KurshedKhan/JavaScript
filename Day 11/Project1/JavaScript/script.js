@@ -19,7 +19,10 @@ function renderTask(){
       let input = document.createElement("input");
       input.type = "text";
       input.value = obj.text1;
-      input.addEventListener("change",(e) => obj.text1 = e.target.value);
+      // input.addEventListener("change",(event) => obj.text1 = event.target.value);
+      input.addEventListener("change",function(event){
+        obj.text1 = event.target.value;
+      })
       li.appendChild(input);
     }
     else{

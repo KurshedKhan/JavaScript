@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+  <div class="container">
+    <input type="text" placeholder="0" id="inputText" autofocus>
+    <div class="btn-container">
+      <button class="btn1" onclick="AllClear()">C</button>
+      <button class="btn1">B</button>
+      <button class="btn1" onclick="btnValue('(')">(</button>
+      <button class="btn1"  onclick="btnValue(')')">)</button>
+      <button  onclick="btnValue('7')">7</button>
+      <button  onclick="btnValue('8')">8</button>
+      <button  onclick="btnValue('9')">9</button>
+      <button onclick="btnValue('*')" class="btn1">&times;</button>
+      <button  onclick="btnValue('4')">4</button>
+      <button  onclick="btnValue('5')">5</button>
+      <button  onclick="btnValue('6')">6</button>
+      <button  onclick="btnValue('/')" class="btn1">/</button>
+      <button  onclick="btnValue('1')">1</button>
+      <button  onclick="btnValue('2')">2</button>
+      <button  onclick="btnValue('3')">3</button>
+      <button  onclick="btnValue('+')" class="btn1">+</button>
+      <button  onclick="btnValue('0')">0</button>
+      <button  onclick="btnValue('.')">.</button>
+      <button class="btn3" onclick="resultValue()">=</button>
+      <button  onclick="btnValue('-')" class="btn1">-</button>
+    </div>
+  </div>
+  <script src="JavaScript/script.js"></script>
+</body>
+</html>
