@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Real Life Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #111;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .calculator {
+      width: 320px;
+      background-color: #222;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    }
+
+    .display {
+      color: #fff;
+      font-size: 2.2rem;
+      text-align: right;
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: #000;
+      border-radius: 10px;
+      min-height: 60px;
+      word-wrap: break-word;
+      overflow-x: auto;
+    }
+
+    .display[contenteditable="true"] {
+      outline: none;
+      cursor: text;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    button {
+      font-size: 1.5rem;
+      padding: 20px;
+      border: none;
+      border-radius: 50px;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    .operator       { background-color: #ff9500; }
+    .clear, .percent, .sign, .backspace { background-color: #a5a5a5; color: #000; }
+    .operator:active { background-color: #e08a00; }
+    .zero           { grid-column: span 2; }
+  </style>
+</head>
+<body>
+
+<div class="calculator">
+  <div class="display" id="display" contenteditable="true">0</div>
+  <div class="buttons">
+    <button class="clear" onclick="clearAll()">C</button>
+    <button class="sign" onclick="toggleSign()">±</button>
+    <button class="percent" onclick="percentage()">%</button>
+    <button class="operator" onclick="chooseOperator('/')">÷</button>
+
+    <button onclick="appendNumber('7')">7</button>
+    <button onclick="appendNumber('8')">8</button>
+    <button onclick="appendNumber('9')">9</button>
+    <button class="operator" onclick="chooseOperator('*')">×</button>
+
+    <button onclick="appendNumber('4')">4</button>
+    <button onclick="appendNumber('5')">5</button>
+    <button onclick="appendNumber('6')">6</button>
+    <button class="operator" onclick="chooseOperator('-')">−</button>
+
+    <button onclick="appendNumber('1')">1</button>
+    <button onclick="appendNumber('2')">2</button>
+    <button onclick="appendNumber('3')">3</button>
+    <button class="operator" onclick="chooseOperator('+')">+</button>
+
+    <button class="zero" onclick="appendNumber('0')">0</button>
+    <button onclick="appendDecimal()">.</button>
+    <button class="operator" onclick="compute()">=</button>
+    <button class="backspace" onclick="backspace()">⌫</button>
+  </div>
+</div>
+
+<script>
+  const display = document.getElementById('display');
+
+  let currentInput = '0';
+  let previousInput = '';
+  let operator = null;
+  let resetNext = false;
+
+  function updateDisplay() {
+    display.textContent = currentInput;
+  }
+
+  function appendNumber(num) {
+    if (resetNext) {
+      currentInput = num;
+      resetNext = false;
+    } else {
+      currentInput = currentInput === '0' ? num : currentInput + num;
+    }
+    updateDisplay();
+  }
+
+  function appendDecimal() {
+    if (!currentInput.includes('.')) {
+      currentInput += '.';
+      updateDisplay();
+    }
+  }
+
+  function clearAll() {
+    currentInput = '0';
+    previousInput = '';
+    operator = null;
+    resetNext = false;
+    updateDisplay();
+  }
+
+  function toggleSign() {
+    currentInput = (parseFloat(currentInput) * -1).toString();
+    updateDisplay();
+  }
+
+  function percentage() {
+    currentInput = (parseFloat(currentInput) / 100).toString();
+    updateDisplay();
+  }
+
+  function chooseOperator(op) {
+    if (operator && !resetNext) compute();
+    operator = op;
+    previousInput = currentInput;
+    resetNext = true;
+  }
+
+  function compute() {
+    if (!operator || resetNext) return;
+
+    const prev = parseFloat(previousInput);
+    const current = parseFloat(currentInput);
+    let result;
+
+    switch (operator) {
+      case '+': result = prev + current; break;
+      case '-': result = prev - current; break;
+      case '*': result = prev * current; break;
+      case '/': result = current !== 0 ? prev / current : 'Error'; break;
+      default: return;
+    }
+
+    currentInput = result.toString();
+    operator = null;
+    previousInput = '';
+    resetNext = true;
+    updateDisplay();
+  }
+
+  function backspace() {
+    if (resetNext) return;
+    currentInput = currentInput.slice(0, -1);
+    if (currentInput === '') currentInput = '0';
+    updateDisplay();
+  }
+
+  // ✅ Sanitize and auto-remove leading 0 on manual input
+  display.addEventListener('input', () => {
+    let sanitized = display.textContent.replace(/[^0-9+\-*/.%]/g, '');
+
+    if (sanitized.length > 1 && sanitized.startsWith('0') && !sanitized.startsWith('0.')) {
+      sanitized = sanitized.replace(/^0+/, '');
+    }
+
+    currentInput = sanitized || '0';
+    display.textContent = currentInput;
+  });
+
+  // ✅ Enter key = compute
+  display.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      compute();
+    }
+  });
+</script>
+
+</body>
+</html>

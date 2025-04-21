@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Real-Life Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+    }
+    
+    .calculator {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    
+    #display {
+      width: 92%;
+      font-size: 1.5em;
+      padding: 10px;
+      margin-bottom: 10px;
+      text-align: right;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+    }
+    
+    .buttons {
+      display: grid;
+      
+      gap: 10px;
+    }
+    
+    button {
+      font-size: 1.2em;
+      padding: 15px;
+      border: none;
+      background: #f2f2f2;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    
+    button:hover {
+      background: #ddd;
+    }
+    
+    #equals {
+      grid-column: span 4;
+      background: #28a745;
+      color: white;
+    }
+    
+    #equals:hover {
+      background: #218838;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="display" autofocus />
+    <div class="buttons">
+      <button data-value="7">7</button>
+      <button data-value="8">8</button>
+      <button data-value="9">9</button>
+      <button data-value="/">÷</button>
+
+      <button data-value="4">4</button>
+      <button data-value="5">5</button>
+      <button data-value="6">6</button>
+      <button data-value="*">×</button>
+
+      <button data-value="1">1</button>
+      <button data-value="2">2</button>
+      <button data-value="3">3</button>
+      <button data-value="-">−</button>
+
+      <button data-value="0">0</button>
+      <button data-value=".">.</button>
+      <button id="clear">C</button>
+      <button data-value="+">+</button>
+
+      <button id="equals">=</button>
+    </div>
+  </div>
+  <script>
+    const display = document.getElementById("display");
+    const buttons = document.querySelectorAll("button");
+    
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        const value = button.dataset.value;
+    
+        if (value) {
+          insertAtCursor(display, value);
+        } else if (button.id === "clear") {
+          display.value = "";
+        } else if (button.id === "equals") {
+          try {
+            display.value = evaluateExpression(display.value);
+          } catch (err) {
+            display.value = "Error";
+          }
+        }
+        display.focus();
+      });
+    });
+    
+    // Keyboard input
+    display.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        try {
+          display.value = evaluateExpression(display.value);
+        } catch {
+          display.value = "Error";
+        }
+      }
+    });
+    
+    // Inserting text at cursor
+    function insertAtCursor(input, value) {
+      const start = input.selectionStart;
+      const end = input.selectionEnd;
+      const text = input.value;
+    
+      input.value = text.slice(0, start) + value + text.slice(end);
+      input.selectionStart = input.selectionEnd = start + value.length;
+    }
+    
+    // Safe expression evaluator (basic)
+    function evaluateExpression(expr) {
+      const tokens = tokenize(expr);
+      const rpn = toRPN(tokens);
+      return evaluateRPN(rpn);
+    }
+    
+    // Tokenize input
+    function tokenize(expr) {
+      const regex = /\d+(\.\d+)?|[+\-*/()]/g;
+      return expr.match(regex);
+    }
+    
+    // Shunting Yard Algorithm to convert to RPN
+    function toRPN(tokens) {
+      const out = [], ops = [];
+      const prec = { '+': 1, '-': 1, '*': 2, '/': 2 };
+    
+      tokens.forEach(token => {
+        if (!isNaN(token)) {
+          out.push(token);
+        } else if ("+-*/".includes(token)) {
+          while (ops.length && prec[ops[ops.length - 1]] >= prec[token]) {
+            out.push(ops.pop());
+          }
+          ops.push(token);
+        } else if (token === "(") {
+          ops.push(token);
+        } else if (token === ")") {
+          while (ops.length && ops[ops.length - 1] !== "(") {
+            out.push(ops.pop());
+          }
+          ops.pop(); // remove "("
+        }
+      });
+    
+      return out.concat(ops.reverse());
+    }
+    
+    // Evaluate RPN
+    function evaluateRPN(tokens) {
+      const stack = [];
+    
+      tokens.forEach(token => {
+        if (!isNaN(token)) {
+          stack.push(parseFloat(token));
+        } else {
+          const b = stack.pop(), a = stack.pop();
+          switch (token) {
+            case "+": stack.push(a + b); break;
+            case "-": stack.push(a - b); break;
+            case "*": stack.push(a * b); break;
+            case "/": stack.push(a / b); break;
+          }
+        }
+      });
+    
+      return stack[0].toString();
+    }
+    
+  </script>
+</body>
+</html>
