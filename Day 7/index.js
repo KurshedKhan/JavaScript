@@ -1,17 +1,17 @@
-// function declaration in js
+//function declaration in js
 
-// function display(){
+function display(){
 
-//   console.log("My function is 1 running.");
-//   let age = prompt("Enter you age : ");
-//   if(age >= 18){
-//     console.log("you are valid");
-//   }
-//   else{
-//     console.log("you are not valid");
-//   }
+  console.log("My function is 1 running.");
+  let age = prompt("Enter you age : ");
+  if(age >= 18){
+    console.log("you are valid",age);
+  }
+  else{
+    console.log("you are not valid",age);
+  }
 
-// }
+}
 
 // display() // function called
 // display() // function called
