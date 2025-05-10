@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create a Date</title>
+</head>
+<body>
+  <h1>Date : </h1>
+  <p id="date"></p>
+  <p id="date1"></p>
+
+
+
+  <script>
+
+    let date = document.getElementById("date");
+    let date1 = document.getElementById("date1");
+
+    setInterval(DateDisplay,1000);
+
+ 
+    
+    function DateDisplay(){
+      let day = new Date();
+      date.innerHTML = day.toTimeString();
+      let h = day.getHours();
+      let m = day.getMinutes();
+      let s = day.getSeconds();
+      date1.innerHTML = h + ":" + m + ":" + s
+
+    }
+  </script>
+</body>
+</html>

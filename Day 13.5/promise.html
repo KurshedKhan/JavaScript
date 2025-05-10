@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promise in JavaScript</title>
+</head>
+<body>
+  <h1>Result Display : </h1>
+  <p id="demo"></p>
+
+
+  <script>
+    let demo = document.getElementById("demo");
+
+    function myDisplay(value){
+      demo.innerText = value;
+    }
+
+    // Producing code for promise
+    let mypromise = new Promise((resolve,reject)=>{
+
+      let age = 16;
+
+      if(age >=18){
+        resolve("Eligible for vote.");
+      }
+      else{
+        reject("not eligible for vote.");
+      }
+
+    });
+
+    // consuming code for promise
+    mypromise.then(
+    function(value){
+      myDisplay(value);
+    },
+    function(value){
+      myDisplay(value);
+    }
+    );
+
+    // Promise  = producing code + consuming code 
+  </script>
+</body>
+</html>
