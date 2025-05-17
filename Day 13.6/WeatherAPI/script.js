@@ -1,4 +1,4 @@
-// http://api.weatherapi.com/v1/current.json?key=2afb9458d32d4425bfd12235251705&q=London&aqi=yes
+// http://api.weatherapi.com/v1/current.json?key=2afb9458d32d4425b5251705&q=London&aqi=yes
 
 let inputText = document.getElementById("input-text");
 let searchButton = document.getElementById("search-button");
@@ -8,7 +8,7 @@ let cityTemp = document.getElementById("city-temp");
 
 async function fetchData(data){
 
-  let response = await fetch(`http://api.weatherapi.com/v1/current.json?key=2afb9458d32d4425bfd12235251705&q=${data}&aqi=yes`);
+  let response = await fetch(`http://api.weatherapi.com/v1/current.json?key=2afb9458d32d4425b5251705&q=${data}&aqi=yes`);
 
   return await response.json();
 }
