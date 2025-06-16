@@ -30,7 +30,6 @@
 // // console.log(greet);
 // // console.log(greet);
 
-
 // let Name = "mohit";
 // console.log("My Name is ",Name);
 // let firstName = "Mamta"; // reassignment operation
@@ -39,11 +38,10 @@
 // const SCHOOL_NAME = "TECH INNOVATION";
 // console.log(SCHOOL_NAME);
 
+// // data type
 
-// // data type 
-
-// let name = "mohit"; // string type value 
-// let roll = 101; // number => integer value 
+// let name = "mohit"; // string type value
+// let roll = 101; // number => integer value
 // let price = 99.99; // number ==> floating point value
 // let isActive = true; // boolean value // condition statement
 // let isOff = false; // boolean value // condition statement
@@ -70,12 +68,10 @@
 
 // console.log(firstNum**secondNum);
 
-
 // // assignment operator
 
 // let name = "Mohan";
 // console.log(name);
-
 
 // let number = 10;
 
@@ -109,7 +105,6 @@
 // let x = 10;
 // let y = 20;
 // console.log((x>y)||(x==y));
-
 
 // let age = 21;
 
@@ -228,7 +223,6 @@
 //     break;
 // }
 
-
 // let fruitName = "carro";
 
 // switch(fruitName){
@@ -243,7 +237,6 @@
 //     console.log("This data is invalid.");
 //     break;
 // }
-
 
 // let grade = "A";
 // switch (grade) {
@@ -278,11 +271,9 @@
 //   }
 // }
 
-
 // for(let i = 0 ; i > 5 ; i--){
 //   console.log(i);
 // }
-
 
 // let age = parseInt(prompt("Enter your age : "));
 // console.log(age);
@@ -290,24 +281,22 @@
 
 // let num1 = "3";
 // let num2 = "5";
-// console.log(num1 + num1 * num2) // 
-
+// console.log(num1 + num1 * num2) //
 
 // for(let i = 0 ; i < 5 ; i++){
 
 //   for(let j = 0 ; j < 5 ; j++){
-    
+
 //     for(let k = 0 ; k < 5 ; k++){
 
 //       console.log(i*j*k);
-      
+
 //     }
 //   }
 
 // }
 
 // string template
-
 
 //  let str = "";
 
@@ -328,7 +317,6 @@
 // }
 
 // console.log(str);
-
 
 // let str = "";
 // for(let i = 1 ; i < 5 ; i++){
@@ -355,7 +343,6 @@
 //   }
 // }
 
-
 // Array
 
 // let marks = [23,45,65,67,54,34];
@@ -371,7 +358,6 @@
 // let salaries = [];
 
 // let size = parseInt(prompt("how many items : "));
-
 
 // // empty array ==> add new values ;
 // for(let i = 0 ; i < size ; i++){
@@ -390,18 +376,15 @@
 // salaries.push(50000);
 // console.log(salaries);
 
-
 // salaries.push(20000);
 // console.log(salaries);
 
 // salaries.push(78000);
 // console.log(salaries)
 
-
 // // remove from ending part of array
 // salaries.pop();
 // console.log(salaries)
-
 
 // // add new item in our array from starting
 // salaries.unshift(12000);
@@ -439,10 +422,9 @@
 //   console.log("Hello World!!!");
 // }
 
-
-function spr(){
-  console.log("======================");
-}
+// function spr() {
+//   console.log("======================");
+// }
 
 // display(); // function calling part
 // spr();
@@ -451,7 +433,6 @@ function spr(){
 // spr();
 // display();
 // spr();
-
 
 // function add(num1,num2){
 //   let total = 0;
@@ -473,7 +454,6 @@ function spr(){
 
 // multi(56,76);
 // add(56,76);
-
 
 // function calculator(num1,opr,num2){
 
@@ -582,15 +562,12 @@ function spr(){
 // let [name,age] = getName(myname,myage);
 // console.log("My Name is " + name  + " My age is : " + age);
 
-
 // while(true){
 //   let age = prompt("Enter your age ");
 //   console.log("My age is : ",age);
 // }
 
-// 
-
-
+//
 
 // for(let count = 0;count < 5;count++){
 //  console.log("My couting is : ",count);
@@ -601,14 +578,11 @@ function spr(){
 //   count++;
 // }while(count < 5);
 
-
-
 // const fruits = ["Apple", "Banana", "Grape"];
 
 // for(let i = 0 ;i < fruits.length ; i++){
-  //   console.log(fruits[i]);
-  // }
-  
+//   console.log(fruits[i]);
+// }
 
 // for(let item of fruits){
 //   console.log(item);
@@ -618,43 +592,153 @@ function spr(){
 //   console.log(fruits[item]);
 // }
 
-
 // for(let item in marks){
-  //   console.log(marks[item]+10)
-  // }
+//   console.log(marks[item]+10)
+// }
 
-let marks = [33,54,56,65,78,76];
-let oddMarks = [];
-let evenMarks = [];
+// let marks = [33,54,56,65,78,76];
+// let oddMarks = [];
+// let evenMarks = [];
 
-for(let item of marks){
+// for(let item of marks){
 
-  if(item % 2 !== 0){
-    oddMarks.push(item);
-  }
-  else{
-    evenMarks.push(item);
-  }
+//   if(item % 2 !== 0){
+//     oddMarks.push(item);
+//   }
+//   else{
+//     evenMarks.push(item);
+//   }
 
-}
+// }
 
-console.log(oddMarks);
-console.log(evenMarks);
+// console.log(oddMarks);
+// console.log(evenMarks);
 
-const names = ["Aarav", "Vivaan", "Aditya", "Vihaan", "Arjun", "Sai", "Reyansh", "Krishna", "Ishaan", "Shaurya", "Anaya", "Diya", "Myra", "Aadhya", "Kiara", "Pari", "Meera", "Saanvi", "Navya", "Ira", "Raj", "Amit", "Rohan", "Kunal", "Manav", "Sneha", "Pooja", "Nisha", "Kriti", "Riya"
-];
+// const names = ["Aarav", "Vivaan", "Aditya", "Vihaan", "Arjun", "Sai", "Reyansh", "Krishna", "Ishaan", "Shaurya", "Anaya", "Diya", "Myra", "Aadhya", "Kiara", "Pari", "Meera", "Saanvi", "Navya", "Ira", "Raj", "Amit", "Rohan", "Kunal", "Manav", "Sneha", "Pooja", "Nisha", "Kriti", "Riya"
+// ];
 
-let FiveLetter = [];
-let FiveAboveLetter = [];
+// let FiveLetter = [];
+// let FiveAboveLetter = [];
 
-for(let item of names){
-  if(item.length >5){
-    FiveAboveLetter.push(item);
-  }
-  else{
-    FiveLetter.push(item);
-  }
+// for(let item of names){
+//   if(item.length >5){
+//     FiveAboveLetter.push(item);
+//   }
+//   else{
+//     FiveLetter.push(item);
+//   }
 
-}
-console.log(FiveLetter)
-console.log(FiveAboveLetter)
+// }
+// console.log(FiveLetter)
+// console.log(FiveAboveLetter)
+
+/// callback Function
+
+// function display(FirstName,secondName,callbackFun1,callbackFun2) {
+//   console.log("My Main Function");
+//   callbackFun1(FirstName);
+//   callbackFun2(secondName);
+// }
+
+// display("kuldeep","kumar",firstName,LastName);
+// display("ketan","BhaiSaab",firstName,LastName);
+
+// function firstName(fn) {
+//   console.log("===========");
+//   console.log("My first name is : ",fn);
+// }
+// function LastName(ln) {
+//   console.log("===========");
+//   console.log("My second name is : ",ln);
+// }
+
+// let name1 = "kuldeep";
+
+// (
+//   function(name) {
+//   console.log("===========");
+//   console.log("My Name is : ",name);
+// }
+// )(name1);
+
+
+// let arrNum = [10,20,43,49,52,60,37,58,90,120];
+// let evenNum = [];
+// let OddNum = [];
+
+// const operation = function(item,index,arr){
+
+//   if(item % 2 == 0){
+//    evenNum.push(item);
+//   }
+//   else{
+//     OddNum.push(item);
+//   }
+
+// }
+
+// arrNum.forEach(operation);
+
+// console.log(arrNum);
+// console.log(evenNum);
+// console.log(OddNum);
+
+
+
+// const names = ["Aarav", "Vivaan", "Aditya", "Vihaan", "Arjun", "Sai", "Reyansh", "Krishna", "Ishaan", "Shaurya", "Anaya", "Diya", "Myra", "Aadhya", "Kiara", "Pari", "Meera", "Saanvi", "Navya", "Ira", "Raj", "Amit", "Rohan", "Kunal", "Manav", "Sneha", "Pooja", "Nisha", "Kriti", "Riya"
+// ];
+
+// let aLetter = [];
+// let otherLetter = [];
+
+// names.forEach((value,index,arr)=>{
+//   if(value.length > 4){
+//     aLetter.push(value.toLowerCase());
+//   }else{
+//     otherLetter.push(value.toLowerCase());
+//   }
+// });
+// console.log(names);
+// console.log(aLetter);
+// console.log(otherLetter);
+
+// let numArr = [1,2,3,4,5,6,7,8];
+
+// numArr.forEach((value)=>{
+//   if(value === 3){
+//     console.log(value);
+//     return true;
+//   }
+// })
+
+
+// let numbers = [5, 12, 23, 34, 45, 56, 67, 78, 89, 90, 11, 22, 33, 44, 55, 66, 77, 88, 99, 100, 1, 3, 7, 9, 13, 17, 21, 25, 29, 31, 35, 39, 43, 47, 51, 59, 61, 69, 73, 79, 83, 87, 91, 95, 101, 105, 109, 113, 117, 121
+// ];
+
+// let sum = 0;
+
+// numbers.forEach((item)=>{
+//   sum += item;
+// })
+
+// console.log(sum);
+
+
+// let numbers = [5, 12, 23, 34, 45, 56, 67, 78, 89, 90, 11, 22, 33, 44, 55, 66, 77, 88, 99, 100, 1, 3, 7, 9, 13, 17, 21, 25, 29, 31, 35, 39, 43, 47, 51, 59, 61, 69, 73, 79, 83, 87, 91, 95, 101, 105, 109, 113, 117, 121 ];
+
+// let OddNum = numbers.map((value)=>{
+//       return value+20000;
+// })
+
+// console.log(OddNum);
+
+
+// let numbers = [5, 12, 23, 34, 45, 56, 67, 78, 89, 90, 11, 22, 33, 44, 55, 66, 77, 88, 99, 100, 1, 3, 7, 9, 13, 17, 21, 25, 29, 31, 35, 39, 43, 47, 51, 59, 61, 69, 73, 79, 83, 87, 91, 95, 101, 105, 109, 113, 117, 121 ];
+
+// let EvenNum = numbers.filter((value)=>{
+//   if(value % 2 == 0){
+//     return value;
+//   }
+// })
+
+// console.log(EvenNum);
