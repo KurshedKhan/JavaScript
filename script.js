@@ -742,3 +742,57 @@
 // })
 
 // console.log(EvenNum);
+
+
+const person = ["mohit",21,5.7,"B+"];
+// for(let i of person){
+//   console.log(i)
+// }
+
+let student = {
+  StuName : "Mohit",
+  StuAge : 21,
+  StuHeight : 5.7,
+  StuBloodgroup : "B+",
+  subjects :[23,56,87,56,43,90],
+  subject : {hindi : 23,english : 56,math : 87,Science : 56,ss : 43,},
+  myDetails : function(){
+    console.log("My name is ",this.StuName,"And my age is :",this.StuAge,this);
+  }
+}
+
+// console.log("Student Name is ",student.StuName);
+// console.log("Student Age :",student.StuAge);
+
+// console.log(student["StuName"]);
+
+// for(let key in student){
+//   console.log(key,student[key]);
+// }
+
+// console.log(Object.keys(student));
+// console.log(Object.values(student));
+// console.log(Object.entries(student));
+
+// student.StuName = "Suresh";
+// console.log(student.StuName);
+// student["roll"] = 101;
+// console.log(student.roll);
+// console.log(student);
+
+// let objValue = Object.values(student);
+// objValue.forEach((item)=>{
+//   console.log(item)
+// })
+// console.log("=============")
+// for(let item in student){
+//   console.log(student[item]);
+// }
+
+// student.subjects.forEach((value)=>{
+//   console.log(value);
+// });
+
+// console.log(student.subject.hindi);
+
+student.myDetails();
