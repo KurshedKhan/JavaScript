@@ -744,22 +744,22 @@
 // console.log(EvenNum);
 
 
-const person = ["mohit",21,5.7,"B+"];
+// const person = ["mohit",21,5.7,"B+"];
 // for(let i of person){
 //   console.log(i)
 // }
 
-let student = {
-  StuName : "Mohit",
-  StuAge : 21,
-  StuHeight : 5.7,
-  StuBloodgroup : "B+",
-  subjects :[23,56,87,56,43,90],
-  subject : {hindi : 23,english : 56,math : 87,Science : 56,ss : 43,},
-  myDetails : function(){
-    console.log("My name is ",this.StuName,"And my age is :",this.StuAge,this);
-  }
-}
+// let student = {
+//   StuName : "Mohit",
+//   StuAge : 21,
+//   StuHeight : 5.7,
+//   StuBloodgroup : "B+",
+//   subjects :[23,56,87,56,43,90],
+//   subject : {hindi : 23,english : 56,math : 87,Science : 56,ss : 43,},
+//   myDetails : function(){
+//     console.log("My name is ",this.StuName,"And my age is :",this.StuAge,this);
+//   }
+// }
 
 // console.log("Student Name is ",student.StuName);
 // console.log("Student Age :",student.StuAge);
@@ -795,4 +795,50 @@ let student = {
 
 // console.log(student.subject.hindi);
 
-student.myDetails();
+// student.myDetails();
+
+// let age = 10;
+// let status = age <= 18 ? age > 13 ? "Teenager" : "Minor" : "Adult";
+// console.log(status);
+
+// const welcomeUser = function(){
+//   return "Hello User";
+// }
+
+// const showLogin = function(){
+//   return "Login successfully";
+// }
+
+// let isLogin = Boolean(parseInt(prompt("Enter your login status 1.true,0.false")));
+// console.log(typeof isLogin,isLogin);
+// let result = isLogin ? showLogin() : welcomeUser();
+// console.log(result);
+
+
+// let num = 5;
+// let result = (num % 2 == 0) ? "Even" : "Odd";
+// console.log(result);
+
+let name = "mohit";
+console.log("My name is ",name);
+
+let message = 'hello user';
+console.log(message);
+
+let name1 = "kurshed";
+console.log(`Hello my name is : ${name1}`);
+
+let MyMessage = "   PersOnal MesSage.   ";
+console.log(MyMessage.length);
+console.log(MyMessage.toUpperCase());
+console.log(MyMessage.toLowerCase());
+console.log(MyMessage.trim());
+console.log(MyMessage.charAt(5));
+
+for(let i = 0 ; i < name1.length ; i++){
+  console.log(name1.charAt(i).toUpperCase());
+}
+
+let words = "mohit bhai";
+console.log(words.indexOf("i"));
+console.log(words.lastIndexOf("i"));
